@@ -1,4 +1,4 @@
-# Basic-real-time-color-conversion
+# Basic-ROI-based-color-conversion
 
 Basic approach for a ROI based visual marker tracking.
 
