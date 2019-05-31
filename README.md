@@ -1,6 +1,6 @@
-# Basic-ROI-based-color-conversion
+# Target detection and Tracking
 
-Basic approach for a ROI based visual marker tracking.
+Target detection and Tracking using Hybrid Target Tracking (HTT) algorithm.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
