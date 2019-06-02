@@ -2,10 +2,8 @@
 
 Target detection and Tracking using Hybrid Target Tracking (HTT) algorithm. As shown in the figure below, a rgb visual marker is attached to the side frame of the target robot, and the centroid position of the 3 colored markers is tracked for Image Based Visual Servoing.
 
-![image](https://user-images.githubusercontent.com/50490953/58768304-3c38ec80-8567-11e9-9775-2118519ce612.png)
-
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/50490953/58768304-3c38ec80-8567-11e9-9775-2118519ce612.png">
+  <img width="640" height="480" src="https://user-images.githubusercontent.com/50490953/58768304-3c38ec80-8567-11e9-9775-2118519ce612.png">
 </p>
 ---------------------------------------------------------------------------------------------------------------------------------------
 
