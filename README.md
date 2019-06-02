@@ -6,10 +6,6 @@ Target detection and Tracking using Hybrid Target Tracking (HTT) algorithm. As s
   <img width="640" height="480" src="https://user-images.githubusercontent.com/50490953/58768304-3c38ec80-8567-11e9-9775-2118519ce612.png">
 </p>
 
-<p align="center">
-  <img width="320" height="320" src="https://user-images.githubusercontent.com/50490953/58768798-8bcee680-856e-11e9-9ffc-27f86d23c195.png">
-  <img width="320" height="320" src="https://user-images.githubusercontent.com/50490953/58768798-8bcee680-856e-11e9-9ffc-27f86d23c195.png">
-</p>
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 REFERENCES:
