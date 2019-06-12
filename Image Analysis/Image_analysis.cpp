@@ -10,7 +10,15 @@ using namespace std;
 
 // Function to apply the morphological operations
 void morph_ft(Mat &thresh, int num_iter){
-
+	
+	/*
+	// Creating a self-defined shape for the structuring element
+	Mat erosion_st_elem = (Mat_<uchar>(4,4) << 0, 1, 1, 0,
+						   1, 1, 1, 1,
+						   1, 1, 1, 1,
+						   0, 1, 1, 0);
+	*/
+	
 	// Creating the structuring elements for the erosion and dilation
 	// process of the morphological operations. 
 	Mat erosion_st_elem = getStructuringElement(MORPH_RECT, Size(13,13));
