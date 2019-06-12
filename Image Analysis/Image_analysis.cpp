@@ -12,7 +12,7 @@ using namespace std;
 void morph_ft(Mat &thresh, int num_iter){
 	
 	/*
-	// Creating a self-defined shape for the structuring element
+	// Creating a self-defined kernel shape for the structuring element
 	Mat erosion_st_elem = (Mat_<uchar>(4,4) << 0, 1, 1, 0,
 						   1, 1, 1, 1,
 						   1, 1, 1, 1,
