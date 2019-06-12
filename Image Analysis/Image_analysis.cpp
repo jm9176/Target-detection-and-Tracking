@@ -36,7 +36,7 @@ void morph_ft(Mat &thresh, int num_iter){
 
 
 // Function to track the thresholded targets in the image plane
-void track_target(float &x, float &y, Mat &thresh){
+void track_target(float &x, float &y, Mat &thresh, bool &status){
 
 	// Defining the min area value for the tracking.
 	// If yes, then target is found, else, it is considered
@@ -57,11 +57,13 @@ void track_target(float &x, float &y, Mat &thresh){
 	if (area1>min_objArea){
 		x = (moment1.m10 / area1);
 		y = (moment1.m01 / area1);
+		status = true;
 	}
 
 	else {
 		x = 0;
 		y = 0;
+		status = false;
 	}
 
 }
@@ -78,6 +80,9 @@ int main(int argc, char** argv[]){
 	// Initializing variables for the target tracking
 	float x, y = 0;
 
+	// Initializing the tracking status
+	bool status = false
+	
 	// Creating the Image objects
 	Mat cameraFeed, HSV_img, thresh_img;
 
@@ -93,7 +98,7 @@ int main(int argc, char** argv[]){
 	// Defining the image output window size
 	cap.set(CV_CAP_PROP_FRAME_HEIGHT, frameHeight);
 	cap.set(CV_CAP_PROP_FRAME_WIDTH, frameWidth);
-
+	
 	while (1){
 	
 		// Updating the frames 
@@ -109,9 +114,12 @@ int main(int argc, char** argv[]){
 		morph_ft(thresh_img, num_iter);
 
 		// Tracking the white pixelated area
-		track_target(x, y, thresh_img);
-		circle(cameraFeed, Point(x, y), 3, Scalar(0, 0, 255), 3, 8, 0);
-
+		track_target(x, y, thresh_img, status);
+		
+		if (status == true){
+			circle(cameraFeed, Point(x, y), 3, Scalar(0, 0, 255), 3, 8, 0);
+		}
+			
 		// Generating the image outputs
 		imshow("BGR Image", cameraFeed);
 		imshow("HSV Image", HSV_img);
