@@ -1,1 +1,0 @@
-This folder contains the related checkpoint files for the trained model. Approximately 700 images of RGB colored marker as shown in the Readme.md file were used along-with the yolo-tiny model to generate the related detection output.
